@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "commands": [
+    {
+      "id": "waapi_article.compare_audio_length",
+      "displayName": "Compare Audio length from two groups",
+      "program": "py",
+      "startMode": "SingleSelectionSingleProcess",
+      "args": "\"${WwiseProjectRoot}/Scripts/compare_audio_length.py\" ${id}",
+      "redirectOutputs": true,
+      "contextMenu": {
+        "basePath": "WAAPI",
+        "enabledFor": "ActorMixer"
+      }
+    },
+    {
+      "id": "waapi_article.refactor_into_character_switch",
+      "displayName": "Refactor into character switch",
+      "program": "py",
+      "args": "\"${WwiseProjectRoot}/Scripts/refactor_into_character_switch.py\" ${id}",
+      "startMode": "MultipleSelectionSingleProcessSpaceSeparated",
+      "redirectOutputs": true,
+      "contextMenu": {
+        "basePath": "WAAPI",
+        "enabledFor": "ActorMixer"
+      }
+    }
+  ]
+}
